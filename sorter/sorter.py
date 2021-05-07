@@ -1,7 +1,6 @@
 # Sort shopping list
 
 import pandas as pd
-import numpy as np
 import spacy
 import os
 import re
@@ -47,8 +46,8 @@ if __name__ == '__main__':
     products = get_products()
     products = clean_items(products)
 
+    # Match list items to location reference data
     match_products = item_matcher(products, locations)
-
     match_products.sort_values(by=['Aisle', 'Position'])
 
-print(match_products)
+    print(match_products)
