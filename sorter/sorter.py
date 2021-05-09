@@ -5,7 +5,7 @@ import spacy
 import os
 import re
 
-os.system('python -m spacy download en_core_web_sm')
+# os.system('python -m spacy download en_core_web_sm')
 
 
 def get_locations(store='Aldi', identifier='Muller'):
@@ -31,9 +31,23 @@ def clean_items(items):
 
 
 def item_matcher(items, locations):
-    items_df = pd.DataFrame(items, columns=['Product'])
-    match_products = items_df.set_index('Product').join(locations.set_index('CleanProduct')[['Aisle', 'Position']])
+    match_products = items.set_index('CleanProduct').join(locations.set_index('CleanProduct')[['Aisle', 'Position']])
+    match_products.fillna({'Aisle': 'Unknown', 'Position': 0}, inplace=True)
     return match_products
+
+
+def item_sorter(match_products):
+    sort_products = match_products.sort_values(by=['Aisle', 'Position'])
+
+    outlist = []
+    for aisle in sort_products['Aisle'].unique():
+        outlist.append('---- Aisle: {} ----'.format(aisle))
+        for product in sort_products.loc[sort_products['Aisle'] == aisle]['Product']:
+            outlist.append(product)
+
+    stringout = '\n'.join(outlist)
+    return stringout
+
 
 
 if __name__ == '__main__':
@@ -43,11 +57,14 @@ if __name__ == '__main__':
     locations["CleanProduct"] = clean_items(locations["Product"])
 
     # Get shopping list products
-    products = get_products()
-    products = clean_items(products)
+    original_products = get_products()
+    clean_products = clean_items(original_products)
+    products = pd.DataFrame({'Product': original_products, 'CleanProduct': clean_products})
 
     # Match list items to location reference data
     match_products = item_matcher(products, locations)
-    match_products.sort_values(by=['Aisle', 'Position'])
 
-    print(match_products)
+    # Sort and return output list
+    output_string = item_sorter(match_products)
+
+    print(output_string)

@@ -8,8 +8,9 @@ api = Api(app)
 
 
 class ListSort(Resource):
-    print("hello?")
-    pass
+    def get(self):
+        data = 'asdf'
+        return {'data': data}, 200
 
 
 api.add_resource(ListSort, '/listsort')  # '/users' is our entry point for Users
