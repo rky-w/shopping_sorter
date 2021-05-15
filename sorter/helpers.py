@@ -1,11 +1,8 @@
-# Sort shopping list
 
+# Helper functions for shopping sorter
 import pandas as pd
 import spacy
-import os
 import re
-
-# os.system('python -m spacy download en_core_web_sm')
 
 
 def get_locations(store='Aldi', identifier='Muller'):
