@@ -1,0 +1,63 @@
+Store,Identifier,Product,Aisle,Position
+Aldi,Muller,broccoli,A,1
+Aldi,Muller,tenderstem broccoli,A,2
+Aldi,Muller,lettuce,A,3
+Aldi,Muller,salad,A,4
+Aldi,Muller,tomato,A,5
+Aldi,Muller,carrot,A,6
+Aldi,Muller,pepper,A,7
+Aldi,Muller,pizza,A,8
+Aldi,Muller,milk,B,1
+Aldi,Muller,cream,B,2
+Aldi,Muller,yoghurt,B,3
+Aldi,Muller,cheese,C,1
+Aldi,Muller,halloumi,C,2
+Aldi,Muller,pasta,C,3
+Aldi,Muller,spaghetti,C,4
+Aldi,Muller,pasta sauce,C,5
+Aldi,Muller,mayonnaise,C,6
+Aldi,Muller,olive oil,C,7
+Aldi,Muller,oil,C,8
+Aldi,Muller,sunflower oil,C,9
+Aldi,Muller,vegetable oil,C,10
+Aldi,Muller,eggs,D,1
+Aldi,Muller,potato,D,1
+Aldi,Muller,sweet potato,D,2
+Aldi,Muller,onion,D,3
+Aldi,Muller,garlic,D,4
+Aldi,Muller,ginger,D,5
+Aldi,Muller,tinned tomatoes,D,6
+Aldi,Muller,tomato puree,D,7
+Aldi,Muller,soup,D,8
+Aldi,Muller,lentils,D,9
+Aldi,Muller,green lentils,D,10
+Aldi,Muller,beans,D,11
+Aldi,Muller,baked beans,D,12
+Aldi,Muller,kidney beans,D,13
+Aldi,Muller,beer,E,1
+Aldi,Muller,wine,E,2
+Aldi,Muller,cider,E,3
+Aldi,Muller,prosecco,E,4
+Aldi,Muller,toothbrush,F,1
+Aldi,Muller,toothpaste,F,2
+Aldi,Muller,deodorant,F,3
+Aldi,Muller,paracetamol,F,4
+Aldi,Muller,cetirizine,F,5
+Aldi,Muller,soap,F,6
+Aldi,Muller,washing up liquid,G,1
+Aldi,Muller,laundry detergent,G,2
+Aldi,Muller,kitchen roll,G,3
+Aldi,Muller,toilet paper,G,4
+Aldi,Muller,cat food,G,5
+Aldi,Muller,frozen pizza,H,1
+Aldi,Muller,burger,H,2
+Aldi,Muller,chicken burger,H,3
+Aldi,Muller,mince,H,4
+Aldi,Muller,frozen peas,H,5
+Aldi,Muller,mixed veg,H,6
+Aldi,Muller,rolls,I,1
+Aldi,Muller,buns,I,2
+Aldi,Muller,bagel,I,3
+Aldi,Muller,crumpets,I,4
+Aldi,Muller,sourdough,I,5
+Aldi,Muller,bread,I,6
