@@ -9,6 +9,12 @@ app = Flask(__name__)
 api = Api(app)
 
 
+@app.route("/")
+def index():
+    page = "<h1>Shopping List Sorter</h1>"
+    return page, 200
+
+
 class ListSort(Resource):
     def get(self):
         # Get location data
@@ -19,7 +25,6 @@ class ListSort(Resource):
             locations.to_csv(index=False),
             mimetype="text/csv",
             headers={"Content-disposition": "attachment; filename=locations.csv"})
-
 
     def post(self):
         # Get shopping list products
@@ -85,9 +90,8 @@ class ListSort(Resource):
         return resp
 
 
-
 api.add_resource(ListSort, '/listsort')  # '/listsort' is our entry point for Users
 
 
 if __name__ == '__main__':
-    app.run()  # run our Flask app
+    app.run(host="127.0.0.1", port=8080, debug=True)  # run our Flask app
